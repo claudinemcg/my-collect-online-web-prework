@@ -1,4 +1,4 @@
-def my_collect(array)
+=begin def my_collect(array)
   i = 0
   new arr = []
   while i < array.length
@@ -8,4 +8,14 @@ def my_collect(array)
     new_arr
 
 
+end
+=end
+def my_collect(array)
+  i = 0
+  result = []
+  while i < array.length
+    result.push(yield array[i])
+      i += 1
+  end
+  result
 end
